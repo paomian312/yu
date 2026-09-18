@@ -5,27 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 176.32.35.44
-  port: 50111
-  cipher: aes-256-gcm
-  password: 6b39ae3234dfd68b
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  type: vless
-  server: 104.21.94.230
-  port: 443
-  uuid: de78c0b1-c5c8-412a-bd92-430d1f2e2642
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv
-  network: ws
-  ws-opts:
-    path: /NmrU9ImDG7jA7oFEem
-    headers:
-      Host: frosty-pond-7436.shhabbyat914.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   type: vless
   server: 46.8.200.91
   port: 443
@@ -39,6 +18,13 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: cf3.rumedia-cdn.com
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: 5dLyPJpSV+QyXFRj+S0dt6xFKHxtcXEkRO/TzJGzryU=
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,7 +32,6 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -54,6 +39,5 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 rules:
 - MATCH,PROXIES
