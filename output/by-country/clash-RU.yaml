@@ -5,18 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
+  type: vless
+  server: 104.21.43.115
+  port: 443
+  uuid: ccaa9413-2163-466e-a915-29c215b0be0a
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nEtRa-28e601.rUZgArSiS053GmAIlCoMsaccOunT.WORKERs.DEV
+  network: ws
+  ws-opts:
+    path: /vl/D1utewa490l8iCymueVABy77F5t?ed=2560
+    headers:
+      Host: netra-28e601.ruzgarsis053gmailcomsaccount.workers.dev
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: ss
   server: 130.49.189.158
   port: 43558
   cipher: chacha20-ietf-poly1305
-  password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
+  password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
   udp: true
 proxy-groups:
 - name: PROXIES
